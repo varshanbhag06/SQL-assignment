@@ -44,7 +44,8 @@ JOIN
 ON
   s.number_of_docks > a.avg_docks;
 ```
-![q4](https://github.com/varshanbhag06/SQL/assets/153843798/a1eba6ca-b763-4fcb-8768-d18079374d0b)
+![a2](https://github.com/varshanbhag06/SQL-assignment/assets/153843798/9fd2c51b-baaf-421f-a4c2-47ffbbcabc48)
+
 
 
 QUESTION 4: Which are the top 5 bike stations with the highest number of docks?
