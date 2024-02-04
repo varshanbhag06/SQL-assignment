@@ -9,24 +9,15 @@ FROM
 ![q9](https://github.com/varshanbhag06/SQL/assets/153843798/d48b8593-a462-4a19-a464-04107c468ec8)
 
 QUESTION 2 : Which are the start and end stations with the most common bike type?
-```sql
 SELECT
-  start_station_name,
-  end_station_name,
-  bike_type,
-  COUNT(*) AS trip_count
+  property_type,
+  SUM(number_of_docks) AS total_docks
 FROM
-  `bigquery-public-data.austin_bikeshare.bikeshare_trips`
+  `bigquery-public-data.austin_bikeshare.bikeshare_stations`
 GROUP BY
-  start_station_name,
-  end_station_name,
-  bike_type
-ORDER BY
-  trip_count DESC
-LIMIT
-  1;
+  property_type;
 ```
-![ee](https://github.com/varshanbhag06/SQL-assignment/assets/153843798/eb0ffc29-3268-45ea-9da9-74e4ecf5f345)
+![es](https://github.com/varshanbhag06/SQL-assignment/assets/153843798/8a4384a7-efe9-44aa-a56c-506366301f37)
 
 QUESTION 3 : How many trips start at each station?
 ```sql
