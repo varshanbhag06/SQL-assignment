@@ -121,7 +121,7 @@ LIMIT
 ![q6](https://github.com/varshanbhag06/SQL/assets/153843798/d2393796-3afd-40b0-8215-8cf509126a23)
 
 
-QUESTION 9 : How many subscriber types have more than 50000 trips?
+QUESTION 9 : Which are the subscriber types having more than 50000 trips?
 ```sql
 SELECT
   subscriber_type,
