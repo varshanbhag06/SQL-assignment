@@ -8,8 +8,27 @@ FROM
 ```
 ![q9](https://github.com/varshanbhag06/SQL/assets/153843798/d48b8593-a462-4a19-a464-04107c468ec8)
 
+QUESTION 2 : Which are the start and end stations with the most common bike type?
+```sql
+SELECT
+  start_station_name,
+  end_station_name,
+  bike_type,
+  COUNT(*) AS trip_count
+FROM
+  `bigquery-public-data.austin_bikeshare.bikeshare_trips`
+GROUP BY
+  start_station_name,
+  end_station_name,
+  bike_type
+ORDER BY
+  trip_count DESC
+LIMIT
+  1;
+```
+![ee](https://github.com/varshanbhag06/SQL-assignment/assets/153843798/eb0ffc29-3268-45ea-9da9-74e4ecf5f345)
 
-QUESTION 2 : How many trips start at each station?
+QUESTION 3 : How many trips start at each station?
 ```sql
 SELECT
   stations.name,
@@ -27,7 +46,7 @@ GROUP BY
 
 
 
-QUESTION 3 : What are the stations with more docks than the average number of docks across all stations?
+QUESTION 4 : What are the stations with more docks than the average number of docks across all stations?
 ```sql
 WITH
   AvgDocks AS (
@@ -48,7 +67,7 @@ ON
 
 
 
-QUESTION 4: Which are the top 5 bike stations with the highest number of docks?
+QUESTION 5: Which are the top 5 bike stations with the highest number of docks?
 ```sql
 SELECT
   name,
@@ -63,7 +82,7 @@ LIMIT
 ![q7](https://github.com/varshanbhag06/SQL/assets/153843798/143d7929-5358-488b-bbf5-fd01062fd8bc)
 
 
-QUESTION 5 : What is the average trip duration for each station?
+QUESTION 6 : What is the average trip duration for each station?
 ```sql
 SELECT
   s.name AS station_name,
@@ -80,7 +99,7 @@ GROUP BY
 ![a3](https://github.com/varshanbhag06/SQL-assignment/assets/153843798/536131ca-4d75-404f-82f5-0cb8ed4c7080)
 
 
-QUESTION 6 : What is the average trip duration in minutes for each bike type?
+QUESTION 7 : What is the average trip duration in minutes for each bike type?
 ```sql
 SELECT
   bike_type,
@@ -93,7 +112,7 @@ GROUP BY
 ![q2](https://github.com/varshanbhag06/SQL/assets/153843798/36d9f31f-dbe9-42e6-b576-3a2f70e7e04f)
 
 
-QUESTION 7 : What are the 3 most common subscriber type for bike trips?
+QUESTION 8 : What are the 3 most common subscriber type for bike trips?
 ```sql
 SELECT
   subscriber_type,
@@ -110,7 +129,7 @@ LIMIT
 ![q6](https://github.com/varshanbhag06/SQL/assets/153843798/d2393796-3afd-40b0-8215-8cf509126a23)
 
 
-QUESTION 8 : How many trips are there for each subscriber type, and which types have more than 10000 trips?
+QUESTION 9 : How many trips are there for each subscriber type, and which types have more than 10000 trips?
 ```sql
 SELECT
   subscriber_type,
@@ -125,7 +144,7 @@ HAVING
 ![q11](https://github.com/varshanbhag06/SQL/assets/153843798/d0b0c28a-802c-4c5e-ba8c-ba769026169e)
 
 
-QUESTION 9 : What are the top 3 stations with the highest total trip duration?
+QUESTION 10 : What are the top 3 stations with the highest total trip duration?
 ```sql
 SELECT
   s.name,
@@ -146,7 +165,7 @@ LIMIT
 ![q3](https://github.com/varshanbhag06/SQL/assets/153843798/3f7b0712-71e7-42fc-82f5-3526b06dd9dd)
 
 
-QUESTION 10 : Which is the station with the highest number of trips as a start station?
+QUESTION 11 : Which is the station with the highest number of trips as a start station?
 ```sql
 SELECT
   start_station_id,
@@ -163,7 +182,7 @@ LIMIT
 ![q8](https://github.com/varshanbhag06/SQL/assets/153843798/79dc259a-a4d8-4b04-ac32-710d0191cf78)
 
 
-QUESTION 11 : How many trips start at each station, and what are the status and address of those stations?
+QUESTION 12 : How many trips start at each station, and what are the status and address of those stations?
 ```sql
 WITH StationTrips AS (
   SELECT start_station_id, COUNT(*) as trip_count
