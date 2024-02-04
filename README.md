@@ -8,7 +8,7 @@ FROM
 ```
 ![q9](https://github.com/varshanbhag06/SQL/assets/153843798/d48b8593-a462-4a19-a464-04107c468ec8)
 
-QUESTION 2 : Which are the start and end stations with the most common bike type?
+QUESTION 2 : What are the total number of docks for each property type?
 ```sql
 SELECT
   property_type,
