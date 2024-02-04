@@ -121,7 +121,7 @@ LIMIT
 ![q6](https://github.com/varshanbhag06/SQL/assets/153843798/d2393796-3afd-40b0-8215-8cf509126a23)
 
 
-QUESTION 9 : How many trips are there for each subscriber type, and which types have more than 10000 trips?
+QUESTION 9 : How many trips are there for each subscriber type, and which types have more than 50000 trips?
 ```sql
 SELECT
   subscriber_type,
@@ -131,9 +131,9 @@ FROM
 GROUP BY
   subscriber_type
 HAVING
-  trip_count > 10000;
+  trip_count > 50000;
 ```
-![q11](https://github.com/varshanbhag06/SQL/assets/153843798/d0b0c28a-802c-4c5e-ba8c-ba769026169e)
+![yt](https://github.com/varshanbhag06/SQL-assignment/assets/153843798/05160b91-dac4-4e6f-8cce-73b74d2ada32)
 
 
 QUESTION 10 : What are the top 3 stations with the highest total trip duration?
