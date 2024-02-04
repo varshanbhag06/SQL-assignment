@@ -23,7 +23,8 @@ ON
 GROUP BY
   stations.name;
 ```
-![q5](https://github.com/varshanbhag06/SQL/assets/153843798/8d5153cc-fd20-476e-bc97-a152f8765317)
+![a1](https://github.com/varshanbhag06/SQL-assignment/assets/153843798/b7d626af-f1ef-4be1-b525-0abc6d09da52)
+
 
 
 QUESTION 3 : What are the stations with more docks than the average number of docks across all stations?
