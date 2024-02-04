@@ -77,7 +77,7 @@ ON
 GROUP BY
   s.name;
 ```
-![q1](https://github.com/varshanbhag06/SQL/assets/153843798/1a1d2598-1c08-4a01-b8fd-6959581c95ed)
+![a3](https://github.com/varshanbhag06/SQL-assignment/assets/153843798/536131ca-4d75-404f-82f5-0cb8ed4c7080)
 
 
 QUESTION 6 : What is the average trip duration in minutes for each bike type?
